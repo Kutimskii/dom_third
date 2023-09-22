@@ -1,12 +1,13 @@
 body {
     color: #999;
     margin:auto;
+    background-color:#5ab9b4;
 }
 .flex-wrapper{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color:#5ab9b4;
+
     flex-grow: 1;
     height: 100vh;
 }
@@ -33,4 +34,12 @@ body {
   }
 .img{
     margin: 0;
+}
+.cell img:hover{
+    cursor: url('/src/images/hammer.png'),pointer;
+}
+.missed,
+.score{
+    color: red;
+    font: 1.4rem "Fira Sans", sans-serif;
 }

@@ -1,3 +1,5 @@
+import GameScore from "./GameScore";
+
 export default class GamePlay {
   constructor() {
     this.boardSize = 4;
@@ -8,6 +10,8 @@ export default class GamePlay {
     this.img.src = "images/goblin.png";
     this.img.classList.add("img");
     document.querySelector("body").innerHTML = `
+    <div class="missed">Missed = <span class="missed-number">0</span></div>
+    <div class="score">Scores = <span class="scores-number">0</span></div>
     <div class="flex-wrapper">
       <div class="board-container">
       </div>
@@ -20,12 +24,14 @@ export default class GamePlay {
       cell.classList.add("cell");
       this.container.appendChild(cell);
     }
+    this.GameScore = new GameScore();
+    this.GameScore.countScore();
     this.randomGenerate();
   }
   randomGenerate() {
     setInterval(() => {
       const randomIndex = Math.ceil(Math.random() * 16);
       document.querySelector(`[data-index="${randomIndex}"]`).prepend(this.img);
-    }, 3000);
+    }, 1000);
   }
 }

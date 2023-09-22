@@ -1,5 +1,5 @@
 {
-  "name": "webpack5",
+  "name": "dom_third",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -14,7 +14,7 @@
     "preshow:dist": "npm run build",
     "show:dist": "live-server dist"
   },
-  "author": "coursar",
+  "author": "Kutimskii",
   "license": "MIT",
   "devDependencies": {
     "@babel/cli": "^7.19.3",
@@ -40,5 +40,6 @@
   },
   "dependencies": {
     "jest-environment-jsdom": "^29.6.4"
-  }
+  },
+  "repository": "https://github.com/Kutimskii/dom_third.git"
 }
